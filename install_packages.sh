@@ -15,6 +15,8 @@ apt-get install --no-install-recommends -yqq \
         g++ \
         libboost-filesystem1.65-dev \
         libboost1.65-dev \
+        libprotobuf-dev \
+        protobuf-compiler \
         wget \
         xz-utils
 
@@ -32,7 +34,7 @@ cmake --build . --target install
 cd ..
 
 rm -rf googletest
-rm cmake-3.14.3-Linux-x86_64.sh
+rm cmake-3.17.2-Linux-x86_64.sh
 
 pip3 install setuptools
 pip3 install gcovr
