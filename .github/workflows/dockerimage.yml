@@ -13,14 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Get current date
-      id: date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
     - name: Build, Tag, Push
-      uses: machine-learning-apps/gpr-docker-publish@v1.3
+      uses: mattdavis0351/actions/docker-gpr@v1
       with:
-        IMAGE_NAME: 'ubuntu'
-        TAG: ${{ steps.date.outputs.date }}
-        DOCKERFILE_PATH: "Dockerfile"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         repo-token: ${{ secrets.GITHUB_TOKEN }}
+         image-name: ubuntu
