@@ -17,7 +17,9 @@ apt-get install --no-install-recommends -yqq \
         libboost1.65-dev \
         libprotobuf-dev \
         protobuf-compiler \
-        libopenblas-openmp-dev \
+        libopenblas-dev \
+        ocl-icd-opencl-dev \
+        opencl-headers \
         libpocl2 \
         wget \
         xz-utils
