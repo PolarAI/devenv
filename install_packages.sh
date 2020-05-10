@@ -17,6 +17,8 @@ apt-get install --no-install-recommends -yqq \
         libboost1.65-dev \
         libprotobuf-dev \
         protobuf-compiler \
+        libopenblas-openmp-dev \
+        libpocl2 \
         wget \
         xz-utils
 
@@ -34,7 +36,6 @@ cmake --build . --target install
 cd ..
 
 rm -rf googletest
-rm cmake-3.17.2-Linux-x86_64.sh
 
 pip3 install setuptools
 pip3 install gcovr
