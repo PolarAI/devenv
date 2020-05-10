@@ -14,7 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build, Tag, Push
-      uses: mattdavis0351/actions/docker-gpr@v1
+      uses: elgohr/Publish-Docker-Github-Action@master
       with:
-         repo-token: ${{ secrets.GITHUB_TOKEN }}
-         image-name: ubuntu
+        name: myDocker/repository
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        snapshot: true
