@@ -45,8 +45,8 @@ pip3 install lit
 
 rm -rf /var/lib/apt/lists/*
 
-wget https://github.com/alexbatashev/llvm-build/releases/latest/download/llvm.tar.gz
-tar -xf llvm.tar.gz -C /usr/local
+wget https://github.com/alexbatashev/llvm-build/releases/latest/download/llvm-ubuntu-latest.tar.gz
+tar -xf llvm-ubuntu-latest.tar.gz -C /usr/local
 
-rm -f llvm.tar.gz
+rm -f llvm-ubuntu-latest.tar.gz
 
