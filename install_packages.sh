@@ -1,6 +1,9 @@
 #!/bin/bash
 
 apt-get update -q
+apt install -yqq software-properties-common
+add-apt-repository -y ppa:ubuntu-toolchain-r/test
+apt update -q
 apt-get install --no-install-recommends -yqq \
         make \
         ninja-build \
@@ -11,8 +14,8 @@ apt-get install --no-install-recommends -yqq \
         zlib1g-dev \
         python3 \
         python3-pip \
-        gcc \
-        g++ \
+        gcc-9 \
+        g++-9 \
         libboost-filesystem1.65-dev \
         libboost1.65-dev \
         libprotobuf-dev \
