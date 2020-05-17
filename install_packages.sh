@@ -27,6 +27,9 @@ apt-get install --no-install-recommends -yqq \
         wget \
         xz-utils
 
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 10
+update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 10
+
 wget https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2-Linux-x86_64.sh
 chmod +x cmake-3.17.2-Linux-x86_64.sh
 ./cmake-3.17.2-Linux-x86_64.sh --prefix=/usr/ --exclude-subdir --skip-license
